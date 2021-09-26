@@ -1,21 +1,19 @@
-import {MainLayout} from "../components/MainLayout";
-import Calc from "../components/Calc";
-import {Provider} from "react-redux";
-import {store} from "../components/redux"
+import { Provider } from "react-redux";
 
-import {Main} from "../components/Main";
-
+import { Calendar, Main, MainLayout } from "../components";
+import { store } from "../redux";
 
 export default function Index() {
-
-    return (<MainLayout title={'Home Page'}>
-        <Provider store={store}>
+  return (
+    <MainLayout title={'Home Page'}>
+      <Provider store={store}>
         <div className={'wrapper'}>
-            <Main/>
-            <div className={'calc'}>
-                <Calc/>
-            </div>
+          <Main/>
+          <div className={'calc'}>
+            <Calendar/>
+          </div>
         </div>
-        </Provider>
-    </MainLayout>)
+      </Provider>
+    </MainLayout>
+  )
 }
