@@ -1,0 +1,201 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Rubik medium, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .logo {
+    margin-right: 50%;
+  }
+}
+
+img {
+  height: 6vh;
+  margin-top: 2vh;
+}
+
+.about {
+  margin: 0 15%;
+
+  h2 {
+  }
+
+  h5 {
+    color: rgba(51, 55, 65, 0.68);
+    font-size: small;
+  }
+}
+
+.wrapper {
+  background-image: url("/pic.png");
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main {
+  margin-right: 10px;
+  text-align-last: end;
+
+  h2 {
+    color: yellow;
+    font-size: x-large;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #eaeaea;
+    font-size: small;
+  }
+}
+
+a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: #3D3D3D;
+  font-size: medium;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+.icon {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+header {
+  display: block;
+  width: 100%;
+  padding: 1.75em 0;
+  border-bottom: 1px solid #272829;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.calendar {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.calendar .header {
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 40px;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #272829;
+
+}
+
+.calendar .header .icon {
+  cursor: pointer;
+  transition: .15s ease-out;
+}
+
+.calendar .header .icon:hover {
+  transform: scale(1.75);
+  transition: .25s ease-out;
+  color: dodgerblue;
+}
+
+.calendar .header .icon:first-of-type {
+  margin-left: 1em;
+}
+
+.calendar .header .icon:last-of-type {
+  margin-right: 1em;
+}
+
+.calendar .days {
+  padding: 0.5em 0;
+}
+
+.calendar .body .cell {
+  border-right: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.calendar .body .cell:hover {
+  background: #FDD000;
+  transition: 0.7s ease-out;
+}
+
+.calendar .body .selected {
+  background-color: #FDD000;
+}
+
+.calendar .body .row {
+  border-bottom: 1px solid lightgray;
+}
+
+.calendar .body .row:last-child {
+  border-bottom: none;
+}
+
+.calendar .body .cell:last-child {
+  border-right: none;
+}
+
+.calendar .body .cell .number {
+  color: #DFDFDF;
+}
+
+.calendar .body .cell:hover .number, .calendar .body .selected .number {
+}
+
+.calendar .body .cell .bg {
+  color: #e7e3ef;
+}
+
+.calendar .body .column {
+  flex-grow: 0;
+  flex-basis: calc(100% / 7);
+  width: calc(100% / 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+}
+
+.calendar .body .disabled {
+  pointer-events: none;
+  filter: brightness(40%);
+}
